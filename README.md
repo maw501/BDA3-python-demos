@@ -1,9 +1,9 @@
 # Bayesian Data Analysis 3rd Edition: Python demos
 
-A fork of [Aki Vehtari's repo](https://github.com/avehtari/BDA_py_demos) with Python demos for the book [Bayesian Data
+Demos based on [Aki Vehtari's repo](https://github.com/avehtari/BDA_py_demos) with Python demos for the book [Bayesian Data
 Analysis, 3rd edition by Gelman, Carlin, Stern, Dunson, Vehtari, and Rubin (BDA3)](http://www.stat.columbia.edu/~gelman/book/). Aki also has a course, the repo is here: [Bayesian Data Analysis course material](https://github.com/avehtari/BDA_course_Aalto).
 
-The main changes vs. the original repository are minor ones I have made for pedagogical reasons, either to make things clear to myself or to tidy up certain parts of some notebooks (though not entirely). 
+The main changes vs. the original repository for now are relatively minor ones I have made for pedagogical reasons, either to make things clear to myself or to tidy up certain parts of some notebooks (though not entirely). In the future I plan to use this repository to store other examples from the book as I work through them.
 
 ## Contents
 
