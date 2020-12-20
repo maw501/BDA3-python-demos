@@ -47,7 +47,7 @@ All notebooks relate to the example in BDA3 on p. 37.
 
 **Chapter 9: Decision analysis**
 
-* [`demo9_1.ipynb`](demos_ch9/demo9_1.ipynb): guess how many coins there are in the jar.
+* [`demo9_1.ipynb`](demos_ch9/demo9_1.ipynb): decision analysis example (stand-alone): guess how many coins there are in the jar.
 
 
 **Chapter 10: Intro. to Bayesian computation**
