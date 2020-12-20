@@ -41,8 +41,8 @@ All notebooks relate to the example in BDA3 on p. 37.
 
 * [`demo6_1.ipynb`](demos_ch6/demo6_1.ipynb): posterior predictive checking demo for light speed (BDA3 p. 143).
 * [`demo6_2.ipynb`](demos_ch6/demo6_2.ipynb): posterior predictive checking - testing for autocorrelation in binomial data using Bayesian p-values and test quantities.
-* [`demo6_3.ipynb`](demos_ch6/demo6_3.ipynb): posterior predictive checking demo.
-* [`demo6_4.ipynb`](demos_ch6/demo6_4.ipynb): posterior predictive checking demo.
+* [`demo6_3.ipynb`](demos_ch6/demo6_3.ipynb): posterior predictive checking demo for the light speed example (BDA3 p. 146) with a poorly chosen metric.
+* [`demo6_4.ipynb`](demos_ch6/demo6_4.ipynb): posterior predictive checking demo using marginal predictive checks (BDA3 p. 152-153).
 
 
 **Chapter 9: Decision analysis**
