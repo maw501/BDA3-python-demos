@@ -5,11 +5,11 @@ Analysis, 3rd edition by Gelman, Carlin, Stern, Dunson, Vehtari, and Rubin (BDA3
 
 ## Overview
 
-As well as the original notebooks, this repository is where I plan to store other examples from the book as I work through them/encounter them.
+As well as the original notebooks, this repository is where I plan to store other examples from the book as I work through/encounter them.
 
-Notebooks named in the format `demoX_Y.ipynb` are based on the original notebooks from Aki's repo, the other ones are mine.
+Notebooks named in the format `demoX_Y.ipynb` are based on the original notebooks from Aki's repo (where `X` is the chapter number, `Y` the notebook number) - the other ones are mine.
 
-The main changes vs. the original repository for now are relatively minor ones I have made for pedagogical reasons, either to make things clear to myself or to tidy up certain parts of some notebooks (though not entirely). 
+The main changes vs. the original repository for now are relatively minor ones I have made for pedagogical reasons, either to make things clearer to myself or to tidy up certain parts of some notebooks (though not entirely). 
 
 ## Contents
 
