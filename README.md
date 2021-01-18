@@ -3,11 +3,19 @@
 Demos based on [Aki Vehtari's repo](https://github.com/avehtari/BDA_py_demos) with Python demos for the book [Bayesian Data
 Analysis, 3rd edition by Gelman, Carlin, Stern, Dunson, Vehtari, and Rubin (BDA3)](http://www.stat.columbia.edu/~gelman/book/). Aki also has a course, the repo is here: [Bayesian Data Analysis course material](https://github.com/avehtari/BDA_course_Aalto).
 
-The main changes vs. the original repository for now are relatively minor ones I have made for pedagogical reasons, either to make things clear to myself or to tidy up certain parts of some notebooks (though not entirely). In the future I plan to use this repository to store other examples from the book as I work through them.
+## Overview
+
+As well as the original notebooks, this repository is where I plan to store other examples from the book as I work through them/encounter them.
+
+Notebooks named in the format `demoX_Y.ipynb` are based on the original notebooks from Aki's repo, the other ones are mine.
+
+The main changes vs. the original repository for now are relatively minor ones I have made for pedagogical reasons, either to make things clear to myself or to tidy up certain parts of some notebooks (though not entirely). 
 
 ## Contents
 
 Currently there are demos for BDA3 Chapters 2, 3, 4, 5, 6, 9, 10 and 11. A summary of and link to each notebook is provided below.
+
+
 
 **Chapter 2: Single-parameter models**
 
@@ -43,6 +51,7 @@ All notebooks relate to the example in BDA3 on p. 37.
 * [`demo6_2.ipynb`](demos_ch6/demo6_2.ipynb): posterior predictive checking - testing for autocorrelation in binomial data using Bayesian p-values and test quantities.
 * [`demo6_3.ipynb`](demos_ch6/demo6_3.ipynb): posterior predictive checking demo for the light speed example (BDA3 p. 146) with a poorly chosen metric.
 * [`demo6_4.ipynb`](demos_ch6/demo6_4.ipynb): posterior predictive checking demo using marginal predictive checks (BDA3 p. 152-153).
+* [`p-values.ipynb`](demos_ch6/p-values.ipynb): analysis of the distribution of the Bayesian p-value (BDA3 p. 151).
 
 
 **Chapter 9: Decision analysis**
