@@ -21,17 +21,17 @@ parameters {
 transformed parameters {
   vector[N] theta;
   vector[N_people] alpha;
-  alpha = sigma_alpha * alpha_raw;
+  alpha = b0 + sigma_alpha * alpha_raw;
   
   for (i in 1:N) {
-    theta[i] = alpha[p_idx[i]] + b0 + b1*parent_smoke[i] + b2 * female[i] + (t[i] * (1 - female[i])) * b3 + b4 * t[i] * female[i];
+    theta[i] = alpha[p_idx[i]] + b1*parent_smoke[i] + b2 * female[i] + (t[i] * (1 - female[i])) * b3 + b4 * t[i] * female[i];
   }
   
 }
 
 model {
   // priors
-  sigma_alpha ~ normal(0, 10);
+  sigma_alpha ~ normal(0, 25);
   alpha_raw ~ std_normal();
   
   // likelihood
