@@ -5,16 +5,28 @@ Analysis, 3rd edition by Gelman, Carlin, Stern, Dunson, Vehtari, and Rubin (BDA3
 
 ## Overview
 
-As well as the original notebooks, this repository is where I plan to store other examples from the book as I work through/encounter them.
+There are two main "types" of notebooks:
 
-Notebooks named in the format `demoX_Y.ipynb` are based on the original notebooks from Aki's repo (where `X` is the chapter number, `Y` the notebook number) - the other ones are mine.
+1. **Original notebooks:** those named in the format `demoX_Y.ipynb` are based on those from Aki's repo (where `X` is the chapter number, `Y` the notebook number). 
+    * Here the main changes vs. the original notebooks are generally relatively minor ones I have made for either pedagogical reasons or to tidy up certain parts (though not entirely). 
+2. **Extra notebooks:** notebooks I have added.
 
-The main changes vs. the original repository for now are relatively minor ones I have made for pedagogical reasons, either to make things clearer to myself or to tidy up certain parts of some notebooks (though not entirely). 
+## Stan
 
-## Contents
+The original repository has some of the later examples which are based on `PyStan`, however this is not currently being updated and as such I'm switching to use [CmdStanPy](https://cmdstanpy.readthedocs.io/en/stable-0.9.65/index.html).
+
+Installation instructions can be found on the `CmdStanPy` site: you have been warned.
+## Extra notebooks
+
+**Chapter 6: Model checking**
+
+* [`p_values.ipynb`](demos_ch6/p_values.ipynb): analysis of the distribution of the Bayesian p-value (BDA3 p. 151).
+
+**Chapter 8: Modeling accounting for data collection**
+* [`censored_data.ipynb`](demos_ch8/censored_data.ipynb): example of using Stan to model censored data.
+## Original notebooks
 
 Currently there are demos for BDA3 Chapters 2, 3, 4, 5, 6, 9, 10 and 11. A summary of and link to each notebook is provided below.
-
 
 
 **Chapter 2: Single-parameter models**
@@ -44,15 +56,12 @@ All notebooks relate to the example in BDA3 on p. 37.
 * [`demo5_1.ipynb`](demos_ch5/demo5_1.ipynb): hierarchical model for Rats experiment (BDA3 p. 102).
 * [`demo5_2.ipynb`](demos_ch5/demo5_2.ipynb): hierarchical model for SAT-example data (BDA3 p. 115 and discussion in section 5.5).
 
-
 **Chapter 6: Model checking**
 
 * [`demo6_1.ipynb`](demos_ch6/demo6_1.ipynb): posterior predictive checking demo for light speed (BDA3 p. 143).
 * [`demo6_2.ipynb`](demos_ch6/demo6_2.ipynb): posterior predictive checking - testing for autocorrelation in binomial data using Bayesian p-values and test quantities.
 * [`demo6_3.ipynb`](demos_ch6/demo6_3.ipynb): posterior predictive checking demo for the light speed example (BDA3 p. 146) with a poorly chosen metric.
 * [`demo6_4.ipynb`](demos_ch6/demo6_4.ipynb): posterior predictive checking demo using marginal predictive checks (BDA3 p. 152-153).
-* [`p-values.ipynb`](demos_ch6/p-values.ipynb): analysis of the distribution of the Bayesian p-value (BDA3 p. 151).
-
 
 **Chapter 9: Decision analysis**
 
