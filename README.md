@@ -15,12 +15,13 @@ There are two main "types" of notebooks:
 
 The original repository has some of the later examples which are based on `PyStan`, however this is not currently being updated and as such I'm switching to use [CmdStanPy](https://cmdstanpy.readthedocs.io/en/stable-0.9.65/index.html).
 
-Installation instructions can be found on the `CmdStanPy` site: you have been warned.
+Installation instructions can be found on the [CmdStanPy](https://cmdstanpy.readthedocs.io/en/stable-0.9.65/index.html) site.
 ## Extra notebooks
 
 **Chapter 6: Model checking**
 
 * [`p_values.ipynb`](demos_ch6/p_values.ipynb): analysis of the distribution of the Bayesian p-value (BDA3 p. 151).
+* [`smoking.ipynb`](demos_ch6/smoking.ipynb): posterior predictive checking for the smoking example (BDA3 p. 148-149).
 
 **Chapter 8: Modeling accounting for data collection**
 * [`censored_data.ipynb`](demos_ch8/censored_data.ipynb): example of using Stan to model censored data.
