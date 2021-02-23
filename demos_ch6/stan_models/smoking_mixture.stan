@@ -18,6 +18,7 @@ parameters {
   real gamma_1;
   real gamma_2;
   real<lower=0> sigma_alpha;
+  //real tau;
   vector[N_people] alpha_raw;
 }
 
@@ -27,6 +28,8 @@ transformed parameters {
   vector[N_people] alpha;
 
   alpha = b0 + sigma_alpha*alpha_raw;
+  //alpha = b0 + square(tau) * alpha_raw;
+
 
   for (i in 1:N) {
     theta_susc[i] = gamma_0 + gamma_1 * parent_smoke[i] + gamma_2 * female[i];
@@ -36,37 +39,40 @@ transformed parameters {
 
 model {
   // priors
-  sigma_alpha ~ normal(0, 25);
+  sigma_alpha ~ normal(0, 20);
   alpha_raw ~ std_normal();
-  b0 ~ normal(0, 2);
-  b1 ~ normal(0, 2);
-  b2 ~ normal(0, 2);
-  b3 ~ normal(0, 2);
-  gamma_0 ~ normal(0, 2);
-  gamma_1 ~ normal(0, 2);
-  gamma_2 ~ normal(0, 2);
+  b0 ~ normal(0, 20);
+  b1 ~ normal(0, 20);
+  b2 ~ normal(0, 20);
+  b3 ~ normal(0, 20);
+  gamma_0 ~ normal(0, 20);
+  gamma_1 ~ normal(0, 20);
+  gamma_2 ~ normal(0, 20);
   
 
   // likelihood
   for (n in 1:N) {
+    real lpmf = bernoulli_lpmf(smoke[n] | inv_logit(theta[n]));
+    real prob_zero = 1 - inv_logit(theta_susc[n]);
+    
     if (smoke[n] == 0) {
-      target += log_sum_exp(bernoulli_logit_lpmf(0 | theta_susc[n]),
-                            bernoulli_logit_lpmf(1 | theta_susc[n]) + bernoulli_logit_lpmf(smoke[n] | theta[n]));
+      // target += log_sum_exp(bernoulli_logit_lpmf(0 | theta_susc[n]), bernoulli_logit_lpmf(1 | theta_susc[n]) + lpmf);
+      target += log_mix(prob_zero, 0, lpmf);
     } else {
-      target += bernoulli_logit_lpmf(1 | theta_susc[n]) + bernoulli_logit_lpmf(smoke[n] | theta[n]);
+      // target += bernoulli_logit_lpmf(1 | theta_susc[n]) + lpmf;
+      target += log(1 - prob_zero) + lpmf;
     }
   }
 }
 
 generated quantities {
   int<lower=0, upper=1> susceptible[N];
-  int<lower=0, upper=1> y_pred[N];
+  int y_pred[N] = rep_array(0, N);
+  
   for (n in 1:N) {
     susceptible[n] = bernoulli_logit_rng(theta_susc[n]);
     if (susceptible[n] == 1) {
       y_pred[n] = bernoulli_logit_rng(theta[n]);
-    } else {
-      y_pred[n] = 0;
     }
   }
 }
