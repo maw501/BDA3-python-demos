@@ -39,15 +39,16 @@ transformed parameters {
 
 model {
   // priors
-  sigma_alpha ~ normal(0, 20);
+  sigma_alpha ~ normal(0, 5);
   alpha_raw ~ std_normal();
-  b0 ~ normal(0, 20);
-  b1 ~ normal(0, 20);
-  b2 ~ normal(0, 20);
-  b3 ~ normal(0, 20);
-  gamma_0 ~ normal(0, 20);
-  gamma_1 ~ normal(0, 20);
-  gamma_2 ~ normal(0, 20);
+  //tau ~ normal(0, 20);
+  b0 ~ normal(0, 5);
+  b1 ~ normal(0, 5);
+  b2 ~ normal(0, 5);
+  b3 ~ normal(0, 5);
+  gamma_0 ~ normal(0, 5);
+  gamma_1 ~ normal(0, 5);
+  gamma_2 ~ normal(0, 5);
   
 
   // likelihood
